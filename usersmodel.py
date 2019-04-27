@@ -6,15 +6,15 @@ class UsersModel:
     def init_table(self):
         cursor = self.connection.cursor()
         cursor.execute('''CREATE TABLE IF NOT EXISTS users 
-                            (id INTEGER PRIMARY KEY AUTOINCREMENT, 
-                             login VARCHAR(50),
-                             password_hash VARCHAR(128),
-                             card_number VARCHAR(16),
-                             expiry_date VARCHAR(8),
-                             name VARCHAR(50),
-                             safe_number(3),
-                             money(30) 
-                             )''')
+                                (id INTEGER PRIMARY KEY AUTOINCREMENT, 
+                                 user_name VARCHAR(50),
+                                 password_hash VARCHAR(128),
+                                 card_number VARCHAR(16),
+                                 expiry_date VARCHAR(8),
+                                 name VARCHAR(50),
+                                 safe_number(3),
+                                 money(30)
+                                 )''')
         cursor.close()
         self.connection.commit()
 
