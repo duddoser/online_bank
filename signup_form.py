@@ -11,4 +11,4 @@ class Signuporm(FlaskForm):
         name = StringField('Указаннвые имя и фамилия на карте (на латинице)', validators=[DataRequired()])
         safe_number = StringField('Код на обратной стороне карты', validators=[DataRequired()])
         money = StringField('Количество денег на счету', validators=[DataRequired()])
-        submit = SubmitField('Зарегестрироваться')
+        submit = SubmitField('Зарегистрироваться')
