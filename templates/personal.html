@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Личный кабинет</h1>
+    {% for item, content in lists %}
+    <div class="alert alert-light" role="alert">
+        {{item}} {{content}}
+    </div>
+    {% endfor %}
+{% endblock %}
