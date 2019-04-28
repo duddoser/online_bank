@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>История операций</h1>
+    {% for item in lists %}
+    <div class="alert alert-light" role="alert">
+        {{item}}
+    </div>
+    {% endfor %}
+{% endblock %}
