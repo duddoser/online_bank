@@ -23,10 +23,28 @@
             {% endfor %}
         </p>
         <p>
-            {{form.card_number}}
-        </p>>
-        <p>{{ form.remember_me() }} {{ form.remember_me.label }}</p>
+            {{ form.card_number.label }}
+            {{ form.card_number }}<br>
+            {% for error in form.card_number.errors %}
+                <div class="alert alert-danger" role="alert">
+                    {{ error }}
+                </div>
+            {% endfor %}
+        </p>
+        <p>{{ form.expiry_date.label }}<br>
+            {{ form.expiry_date }}<br>
+        </p>
+        <p>{{ form.name.label }}<br>
+            {{ form.name }}<br>
+        </p>
+        <p>
+            {{ form.safe_number.label }}<br>
+            {{ form.safe_number }} <br>
+        </p>
+        <p>
+            {{ form.money.label }}<br>
+            {{ form.money }}<br>
+        </p>
         <p>{{ form.submit() }}</p>
-        <a href="/sign_up">Зарегестрироваться</a>
     </form>
 {% endblock %}
