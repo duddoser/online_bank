@@ -26,15 +26,27 @@
               <a class="nav-link" href="/home">Главная</a>
           </li>
           <li class="nav-item">
-              <a class="nav-link" href="/personal<int:user_id>">Личный кабинет</a>
+              {% if 'username' not in session %}
+                  <a class="nav-link" href="/sign_in">Личный кабинет</a>
+              {% else %}
+                  <a class="nav-link" href="/personal">Личный кабинет</a>
+              {% endif %}
           </li>
           <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Операции
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="/transfer">Перевод</a>
-                  <a class="dropdown-item" href="/history">История операций</a>
+                  {% if 'username' not in session %}
+                      <a class="nav-link" href="/sign_in">Перевод</a>
+                  {% else %}
+                      <a class="dropdown-item" href="/transfer">Перевод</a>
+                  {% endif %}
+                  {% if 'username' not in session %}
+                      <a class="nav-link" href="/history">История операция</a>
+                  {% else %}
+                      <a class="dropdown-item" href="/history">История операций</a>
+                  {% endif %}
               </div>
           </li>
       </ul>
