@@ -3,8 +3,8 @@ import sqlite3
 
 class DB:
 
-    def __init__(self):
-        conn = sqlite3.connect('news.db', check_same_thread=False)
+    def __init__(self, value):
+        conn = sqlite3.connect(value, check_same_thread=False)
         self.conn = conn
 
     def get_connection(self):
