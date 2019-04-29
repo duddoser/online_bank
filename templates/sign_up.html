@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Регистрация</h1>
+<link rel="stylesheet" href="http://bootstraptema.ru/plugins/2015/bootstrap3/bootstrap.min.css" />
+<style>
+.credit-card-div span {
+ padding-top:10px;
+ }
+.credit-card-div img {
+ padding-top:30px;
+}
+.credit-card-div .small-font {
+ font-size:9px;
+}
+.credit-card-div .pad-adjust {
+ padding-top:10px;
+}
+</style>
+<form method="post">
+        <div class="container">
+ <div class="row ">
+
+ <div class="credit-card-div">
+<div class="panel panel-default" >
+ <div class="panel-heading">
+
+
+            <div class="row ">
+ <div class="col-md-12">
+    <input type="text" class="form-control" id="login" placeholder="Введите логин" name="login"><br>
+ </div>
+    </div>
+    <div class="row ">
+ <div class="col-md-12">
+    <input type="password" class="form-control" id="password" placeholder="Введите пароль" name="password"><br>
+ </div>
+    </div>
+ <div class="row ">
+ <div class="col-md-12">
+ <input type="text" class="form-control" placeholder="Enter Card Number(without spaces)" name='card_number'>
+ </div>
+ </div>
+
+ <div class="row ">
+ <div class="col-md-3 col-sm-3 col-xs-3">
+ <span class="help-block text-muted small-font" > Expiry Month</span>
+     <div class="form-group">
+         <select class="form-control" id="monthSelect" name="expiry_m">
+             <option>1</option>
+             <option>2</option>
+             <option>3</option>
+             <option>4</option>
+             <option>5</option>
+             <option>6</option>
+             <option>7</option>
+             <option>8</option>
+             <option>9</option>
+             <option>10</option>
+             <option>11</option>
+             <option>12</option>
+         </select>
+     </div>
+ </div>
+ <div class="col-md-3 col-sm-3 col-xs-3">
+ <span class="help-block text-muted small-font" > Expiry Year</span>
+ <input type="text" class="form-control" placeholder="YY" name='expiry_y'>
+ </div>
+ <div class="col-md-3 col-sm-3 col-xs-3">
+ <span class="help-block text-muted small-font" > CCV</span>
+ <input type="text" class="form-control" placeholder="CCV" name='ccv'>
+ </div>
+
+     <div class="row ">
+ <div class="col-md-12">
+    <input type="text" class="form-control" id="money" placeholder="Баланс на карте" name="money"><br>
+ </div>
+    </div>
+
+ <div class="col-md-3 col-sm-3 col-xs-3">
+<img src="http://bootstraptema.ru/snippets/form/2016/form-card/card.png" class="img-rounded" >
+ </div>
+ </div>
+
+ <div class="row ">
+ <div class="col-md-12 pad-adjust">
+
+ <input type="text" class="form-control" placeholder="Name On The Card(on latin)" name='name'><br>
+ </div>
+ </div>
+
+ </div>
+ </div>
+ </div><!-- ./credit-card-div -->
+
+ </div>
+</div><!-- /.container -->
+    <div class="row ">
+ <div class="col-md-12">
+    <button type="submit" class="btn btn-primary">Зарегистрироваться</button>
+ </div>
+    </div>
+</form>
+{% endblock %}
